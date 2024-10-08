@@ -41,7 +41,7 @@
             console.log("parent clicked");
         },true);
         child.addEventListener("click", (e) => {
-            console.log(e.target);
+            e.stopPropagation()
         });
     </script>
 </body>
