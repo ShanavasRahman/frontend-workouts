@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    height: 10vh;
+    background: linear-gradient(135deg, #00C6FF, #0072FF);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header img {
+    max-width: 100%; /* Ensure the image can scale down */
+    height: auto; /* Maintain aspect ratio */
+    width: 8vw; /* This will control the width */
+}
+
+.nav-list ul {
+    list-style: none;
+    display: flex; /* Display items in a row */
+}
+
+.nav-list ul li {
+    margin: 0 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: none; /* Hide menu icon initially */
+    font-size: 2rem; /* Size of the icon */
+    color: white; /* Color of the icon */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Hide the navigation list initially */
+    }
+
+    .menu-icon {
+        display: block; /* Show the hamburger icon */
+    }
+
+    header {
+        justify-content: space-between; /* Space between items */
+    }
+
+    .nav-list ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Place it below the header */
+        right: 0; /* Align to the right */
+        background-color: rgba(0, 0, 0, 0.8); /* Background for dropdown */
+        padding: 10px; /* Padding for dropdown */
+        display: flex; /* Initially hidden */
+    }
+
+    .nav-list ul.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .nav-list ul li {
+        margin: 10px 0; /* Adjust margin for stacked items */
+    }
+}
+
+.grandparent{
+    margin-top: 200px;
+    margin-left: 200px;
+    padding: 50px;
+    width: 200px;
+    height: 150px;
+    background-color: #0072FF;
+}
+.parent{
+    width:150px;
+    padding: 50px;
+    height: 100px;
+    background-color: #00C6FF;
+}
+.child{
+    width:100px;
+    padding: 50px;
+    height: 50px;
+    background-color: black;
+}

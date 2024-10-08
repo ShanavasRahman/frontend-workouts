@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <header>
+        <img src="./images/logo.png" alt="Logo" />
+        <div class="menu-icon">&#9776;</div>
+        <div class="nav-list">
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>Contact</li>
+                <li>About</li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <div class="grandparent">
+            <div class="parent">
+                <div class="child">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const grandparent = document.querySelector(".grandparent");
+        const parent = document.querySelector(".parent");
+        const child = document.querySelector(".child");
+
+        grandparent.addEventListener("click", () => {
+            console.log("grantparent clicked");
+        },true);
+        parent.addEventListener("click", () => {
+            console.log("parent clicked");
+        },false);
+        child.addEventListener("click", (e) => {
+            console.log(e.target);
+        },true);
+    </script>
+</body>
+</html>
+
